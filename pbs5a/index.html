@@ -9,11 +9,25 @@
 
 <p>Because images are treated as inline blocks, you can use them to insert cute
 little smilies right into your text
-<img src="smiley.png" alt=":)" width="16" height="16" /></p>
+<img src="smiley.png" alt=":-)" width="16" height="16" /></p>
 
 <p>Below is an example of a larger image. This one uses a tooltip to specify
 some additional information about the image.</p>
 
 <p><img src="photo.jpg" alt="A Landscape Photo" title="Copyright Bart Busschots 2014" width="640" height="424" /></p>
+<hr />
+<p>
+  Find <em>September 20, 2018</em> notes below.
+</p>
+<h3>Anchors: Links & Fragments</h3>
+<p>
+  for a link to another page include a hypertext reference known as <code>href</code> inside the anchor a tag.  put the href in the opening tag because closing tags never get any attributes in them. Use the standard format name="value" i.e. href="url_to_jump_to"
+</p>
+<p>
+  to add a tooltip use the <code>title</code> attribute and to ask the browser to open the link in a new tab specify a <code>target</code> attribute and give it the value <code>"_blank"</code>.
+</p>
+<p>
+  To use an anchor tag to mark a spot in the current page (known as a fragment) simply use the <code>name="your_fragment"</code> attribute. Elsewhere you can have another anchor which has an <code>href="#your_fragment"</code> attribute. Clicking this link will cause the page to jump to the spot you marked.
+</p>
 </body>
 </html>

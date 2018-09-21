@@ -1,0 +1,62 @@
+/*
+Styles for PBS 6 worked example
+edited and messed up by Jon Kane on September 20, 2018
+*/
+
+/*Examples from the tutorial page
+
+A style attribute on an image tag
+<img src="img.jpg", alt="an image" style="border-width: 0px;" />
+
+CSS Color Examples
+color: Crimson;
+color: #DC143C;
+color: rgb(220, 20, 60);
+
+Example CSS font-family declarations
+font-family: "Times New Roman", Times, serif; (notice: spaces necessitate "")
+font-family: Helvetica, Arial, sans-serif;  (Bart's preference)
+font-family: Verdana, Geneva, sans-serif;
+font-family: "Courier New", Courier, monospace;
+
+font-style: italic;   (enable italics)
+font-style: normal;   (disable italics)
+font-weight: bold;    (enable bold)
+font-weight: normal;  (disable bold)
+*/
+
+/* Set the default text style for the whole page */
+body{
+  font-family: Verdana, Geneva, sans-serif;
+  text-align: justify;
+  background-color: #bbabb1;
+}
+
+/* Style headings */
+h1, h2{
+  text-transform: uppercase;
+  color: #000099;
+}
+h2{
+  font-family: "Courier New", Courier, monospace;
+  font-size: xx-large;
+  font-weight: normal;
+  text-decoration: overline;
+}
+
+/* make strong text dark blue */
+strong{
+  color: #000099;
+}
+
+/* make emphasised text red */
+em{
+  color: DarkRed;
+}
+
+/* style quotations */
+blockquote{
+  font-size: 14pt;
+  font-style: italic;
+  color: rgb(100, 100, 100);
+}
