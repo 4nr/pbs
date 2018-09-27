@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>PBS 7 - Demo</title>
+</head>
+<body>
+<h1>PBS 7 - Demo</h1>
+<p>In this demo we'll play around with styling some boxes.</p>
+
+<h2>Some Nicely Styled Code</h2>
+<p>So far in this series, we've not done any actual programming yet, but when we
+do we'll learn the importance of the JavaScript keyword <code>var</code>.</p>
+<p>As we continue, even big snippets of code like the following will make
+perfect sense to us:</p>
+<pre class="javascript another_class">
+// automatically set the target to _blank on all links in articles
+$(document).ready(function(){
+  $('article a[href]').attr('target', '_blank');
+});
+</pre>
+<pre class="perl random_class">
+use CGI;
+
+# use the CGI module to return a redirect to the browser
+my $q = CGI->new();
+print $q->redirect(
+  -location => 'http://www.bartb.ie/pbs',
+  -status => 301,
+);
+</pre>
+<h2>Some Nicely Styled Quotations</h2>
+<blockquote>
+  <p>Anyway, no drug, not even alcohol, causes the fundamental
+  ills of society. If we're looking for the source of our troubles, we shouldn't
+  test people for drugs, we should test them for stupidity, ignorance, greed and
+   love of power.</p>
+  <p class="author made-up-class">- P.J. O'Rourke</p>
+</blockquote>
+<blockquote>
+  <p>Giving money and power to government is like giving whiskey and car keys to
+  teenage boys.</p>
+  <p class="author">- P.J. O'Rourke</p>
+</blockquote>
+<hr />
+<p id="foot">
+  September 27, 2018
+</p>
+</body>
+</html>

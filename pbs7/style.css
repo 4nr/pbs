@@ -1,0 +1,91 @@
+/*
+Styles for PBS7 Demo
+*/
+
+/* Set the default text style for the whole page */
+body{
+  font-family: Verdana, Geneva, sans-serif;
+  text-align: justify;
+  padding: 20px;
+  margin: 0px;
+}
+
+/* Style headings */
+h1, h2{
+  color: #000099;
+  font-weight: normal;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+h1{
+  font-size: 24pt;
+  margin-top: 0px;
+}
+h2{
+  font-size: 20pt;
+}
+
+/* configure the boxes for text blocks */
+p, pre, blockquote{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 12pt;
+}
+
+/* style code blocks */
+code, pre{
+  border: 2px solid #000099;
+  color: #000099;
+  font-family: "Andale Mono", "Courier New", Courier,  monospace;
+  background-color: #e5e5ff;
+}
+code{
+  border-radius: 5px;
+  padding: 1px;
+}
+pre{
+  border-radius: 10px;
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+pre.javascript{
+  background-image: url(background-javaScript.png);
+/* Jon's styling edit */
+  border: 7px outset gray;
+}
+pre.perl{
+  background-image: url(background-perl.png);
+/*Jon's styling edit*/
+  border: 7px ridge gray;
+}
+
+/* style quotations */
+blockquote{
+  font-family: cursive;
+  border: 1px dotted #333333;
+  border-left: 5px solid #333333;
+  /* border-top-left-radius: 0px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 0px; */
+/* just learned an atom keybinding: control slash will comment out a line */
+  border-radius: 0px 10px 10px 0px;
+  color: #333333;
+  background-color: #F0F0F0;
+  padding: 10px;
+  margin-left: 0px; /* override the default left indent */
+  margin-right: 0px; /* override the default right indent */
+  font-style: italic;
+}
+blockquote p.author{
+  font-style: normal;
+  font-weight: bold;
+  text-align: right;
+  margin-bottom: 0px;
+}
+#foot{
+  font-style: italic;
+  color: DarkRed;
+  text-align: center;
+}
