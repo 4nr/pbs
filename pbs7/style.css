@@ -86,6 +86,8 @@ blockquote p.author{
 }
 #foot{
   font-style: italic;
+  font-size: 12pt;
   color: DarkRed;
   text-align: center;
+  background-color: white;
 }
