@@ -1,0 +1,54 @@
+
+body{
+  font-family: Geneva, Verdana, sans-serif;
+  color: darkblue;
+  background-color: lightgray;
+}
+header, main, footer{
+  background-color: #fcfcfc;
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px;
+}
+#article_1{
+  /* text-align: right; */
+  font-size: 16pt;
+}
+#article_2{
+
+}
+h1{
+  text-transform: uppercase;
+  padding: 10px;
+  border-top: 2px dotted green;
+  border-bottom: 2px dashed green;
+}
+section{
+
+}
+/* .subsection{
+  text-align: center;
+} */
+span{
+  font-weight: bold;
+  font-style: italic;
+}
+pre{
+  text-align: justify;
+  /* font-family: monospace; */
+}
+#foot{
+  font-style: italic;
+  font-size: 12pt;
+  color: DarkRed;
+  text-align: center;
+  background-color: white;
+}
+#clever_trick{
+  text-align: center;
+  width: 50%;
+  margin: 20px auto;
+  /* padding: 5px; */
+  /* border-top: 2px dotted green; */
+  /* border-bottom: 2px dashed green; */
+}

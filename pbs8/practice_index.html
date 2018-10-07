@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="practice_style.css"/>
+  <title>generic tab title</title>
+  <!--all javascript goes here-->
+</head>
+
+<body>
+  <header>
+    <h1 id="clever_trick">Big bold h1 heading</h1>
+    <p>
+      opening paragraph inside the header tag
+    </p>
+  </header>
+
+  <main>
+    <div>
+      <div>
+
+      </div>
+    </div>
+
+    <article id="article_1">
+      <p>
+        an article
+      </p>
+      <section>
+        <p>
+          a section within the first article
+        </p>
+        <section class="subsection">
+          <blockquote>
+            <p>
+              this is a blockquote
+            </p>
+          </blockquote>
+          <aside>
+            this is an aside
+          </aside>
+        </section>
+
+        <section class="subsection">
+          <p>
+            a paragraph with a <span>span</span> in the middle of it
+          </p>
+          <aside>
+            another aside
+          </aside>
+        </section>
+
+      </section>
+
+      <section>
+
+        <section class="subsection">
+          <p>
+            <span>another subsection</span>
+          </p>
+          <aside>
+            another aside
+          </aside>
+        </section>
+
+        <section class="subsection">
+          <p>
+            another subsection
+          </p>
+          <figure>
+            <pre>
+              some preformatted
+              text in place of an
+              image or graph
+              used as a figure
+            </pre>
+            <figcaption>
+              regardless of how many images or whatever are included in the above "fig" there's only one figcaption allowed within it.
+            </figcaption>
+          </figure>
+        </section>
+
+      </section>
+
+    </article>
+
+    <article id="article_2">
+      article 2 text without a p tag
+      <section>
+
+        <section class="subsection">
+          <p>
+            first subsection of article 2
+          </p>
+
+        </section>
+
+        <section class="subsection">
+          <p>
+            second subsection of article 2
+          </p>
+          <p>
+            float: none, left, right
+          </p>
+          <!-- <ol>
+            <li>
+              none
+            </li>
+            <li>
+              left
+            </li>
+            <li>
+              right
+            </li>
+          </ol> -->
+          <p>
+            clear: none, left, right, both
+          </p>
+          <p>
+            <strong>Positioned Boxes</strong>
+          </p>
+          <ul>
+            <li>
+              <em>static:</em> normal flow, unpositioned
+            </li>
+            <li>
+              <em>fixed:</em> fixed in relation to the browser window
+              <ol>
+                <li>
+                  top: pixels down
+                </li>
+                <li>
+                  left: pixels in
+                </li>
+                <li>
+                  right: pixels in
+                </li>
+                <li>
+                  bottom: pixels up
+                </li>
+                <li>
+                  width, height: pixels or auto
+                </li>
+              </ol>
+            </li>
+            <li>
+              <em>absolute:</em> defined in relation to its nearest positioned parent
+            </li>
+            <li>
+              <em>relative:</em> offset from normal position by values you define. can be used simply to make box "positioned"
+            </li>
+            <li>
+              <em>z-index:</em> can be used to specify layer, think stack of projector transparency sheets - bigger numbers on top
+            </li>
+          </ul>
+        </section>
+
+      </section>
+
+      <section>
+
+        <section class="subsection">
+          <p><img src="/pbs5a/photo.jpg" alt="A Landscape Photo" title="Copyright Bart Busschots 2014" width="640" height="424" /></p>
+        </section>
+
+        <section class="subsection">
+        </section>
+
+      </section>
+
+    </article>
+
+  </main>
+
+  <footer>
+    <p>
+      footnotes or something
+    </p>
+    <p id="foot">
+      September 30, October 3, October 5 <br />2018
+    </p>
+  </footer>
+</body>
+</html>
