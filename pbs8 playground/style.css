@@ -1,0 +1,164 @@
+/*
+Styles for PBS Positioning Playground
+
+Copyright 2016 Bart Busschots
+
+This file is part of the Programming By Stealth CSS Positioning Playground.
+
+The Programming By Stealth CSS Positioning Playground. is free software: you can
+redistribute it and/or modify it under the terms of version 3 of the GNU General
+Public  License as published by the Free Software Foundation.
+
+The Programming By Stealth CSS Positioning Playground is distributed in the hope
+that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with
+The Programming By Stealth Positioning Playground.  If not, see
+<http://www.gnu.org/licenses/>.
+*/
+
+/* Set the default text style for the whole page */
+body{
+  font-family: Verdana, Geneva, sans-serif;
+  text-align: justify;
+  padding: 0px;
+  margin: 0px;
+  font-size: 10pt;
+}
+main{
+  margin: 10px;
+}
+
+/* Style the header */
+header{
+  margin: 0px;
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: DimGrey;
+  color: LightGrey;
+  font-size: 10px;
+}
+header a:visited, header a:link, header a:active{
+  color: LightGrey;
+}
+header a:hover{
+  color: white;
+}
+
+/* style the control panel */
+#main_interface{
+  display: none;
+}
+fieldset{
+  border: 1px solid DimGrey;
+  margin-bottom: 10px;
+}
+fieldset fieldset{
+    margin-bottom: 0px;
+}
+fieldset legend{
+  font-size: 14pt;
+  color: DimGrey;
+}
+img.property_save_btn{
+  vertical-align: middle;
+  margin-left: 3px;
+}
+input.property_controller.valid{
+  color: DarkGreen;
+  background-color: #e6ffe6;
+}
+input.property_controller.invalid{
+  color: DarkRed;
+  background-color: #ffe6e6;
+}
+aside{
+    float: right;
+    margin: 10px;
+    margin-right: 0px;
+    padding: 10px;
+    border: 1px dotted DimGrey;
+    background-color: Cornsilk;
+    border-radius: 10px;
+    color: DimGrey;
+}
+aside h1{
+    margin-top: 0px;
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+/* style the individual controller boxes */
+div#box_controls_container{
+  text-align: center;
+}
+div#box_controls_container fieldset{
+  text-align: left;
+  display: inline-block;
+  width: 185px;
+  margin: 10px;
+}
+div#box_controls_container fieldset legend{
+  font-size: 12pt;
+  border-width: 1px;
+  border-style: solid;
+}
+div#box_controls_container label{
+  display: block;
+  font-family: monospace;
+}
+#box1_controller, #box1_controller legend, span.box1{
+  border-color: DarkRed;
+}
+#box1_controller legend, #box1_controller label, span.box1{
+  color: DarkRed;
+}
+#box1_controller legend, span.box1{
+    background-color: #ffe6e6;
+}
+#box2_controller, #box2_controller legend, span.box2{
+  border-color: DarkGreen;
+}
+#box2_controller legend, #box2_controller label, span.box2{
+  color: DarkGreen;
+}
+#box2_controller legend, span.box2{
+    background-color: #e6ffe6;
+}
+#box3_controller, #box3_controller legend, span.box3{
+  border-color: DarkBlue;
+}
+#box3_controller legend, #box3_controller label, span.box3{
+  color: DarkBlue;
+}
+#box3_controller legend, span.box3{
+    background-color: #e6e6ff;
+}
+#box4_controller, #box4_controller legend, span.box4{
+  border-color: DarkOrange;
+}
+#box4_controller legend, #box4_controller label, span.box4{
+  color: DarkOrange;
+}
+#box4_controller legend, span.box4{
+    background-color: #ffffcc;
+}
+#box5_controller, #box5_controller legend, span.box5{
+  border-color: DarkMagenta;
+}
+#box5_controller legend, #box5_controller label, span.box5{
+  color: DarkMagenta;
+}
+#box5_controller legend, span.box5{
+    background-color: #ffe6ff;
+}
+span.box{
+    border-radius: 5px;
+    border-style: dotted;
+    border-width: 1px;
+    padding: 1px;
+    display: inline-block;
+    margin: 1px 0px;
+}

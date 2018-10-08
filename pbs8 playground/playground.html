@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<!--
+Copyright 2016 Bart Busschots
+
+This file is part of the Programming By Stealth CSS Positioning Playground.
+
+The Programming By Stealth CSS Positioning Playground. is free software: you can
+redistribute it and/or modify it under the terms of version 3 of the GNU General
+Public  License as published by the Free Software Foundation.
+
+The Programming By Stealth CSS Positioning Playground is distributed in the hope
+that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with
+The Programming By Stealth Positioning Playground.  If not, see
+<http://www.gnu.org/licenses/>.
+-->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>CSS Positioning Playground</title>
+  <script src="contrib/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript">
+  //<![CDATA[
+
+    // On document load
+    $(document).ready(function(){
+      // init the control panel in the opening window
+      opener.initControlPanel();
+    });
+
+    // On Window resize
+    $(window).resize(function(){
+      opener.renderCurrentBoxStates();
+    });
+
+    // On window close
+    $(window).unload(function(){
+      opener.resetInterface();
+    });
+  //]]>
+</script>
+  <style type="text/css">
+    /* Style the four playground boxes */
+    div.box{
+      min-height: 30px;
+      padding: 0px;
+      margin: 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    div#box1{ /* the red box */
+      border: 1px dotted DarkRed;
+      color: DarkRed;
+      background-color: #ffe6e6;
+      background-image: url(box1.png);
+    }
+    div#box2{ /* the green box */
+      border: 1px dotted DarkGreen;
+      color: DarkGreen;
+      background-color: #e6ffe6;
+      background-image: url(box2.png);
+      /* position: relative; */
+    }
+    div#box3{ /* the blue box */
+      border: 1px dotted DarkBlue;
+      color: DarkBlue;
+      background-color: #e6e6ff;
+      background-image: url(box3.png);
+    }
+    div#box4{ /* the yellow box */
+      border: 1px dotted DarkOrange;
+      color: DarkOrange;
+      background-color: #ffffcc;
+      background-image: url(box4.png);
+      /* margin-left: 140px; */
+    }
+    div#box5{ /* the magenta box */
+      border: 1px dotted DarkMagenta;
+      color: DarkMagenta;
+      background-color: #ffe6ff;
+      background-image: url(box5.png);
+      /* position: absolute;
+      margin: 0px;
+      top: 20px;
+      left: 20px;
+      width: 100px; */
+    }
+  </style>
+</head>
+<body>
+<!-- The boxes to be manipulated -->
+<div id="box1" class="box"></div>
+<div id="box2" class="box">
+  <div id="box4" class="box"></div>
+  <div id="box5" class="box"></div>
+</div>
+<div id="box3" class="box"></div>
+</body>
+</html>

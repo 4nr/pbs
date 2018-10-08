@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+<!--
+Copyright 2016 Bart Busschots
+
+This file is part of the Programming By Stealth CSS Positioning Playground.
+
+The Programming By Stealth CSS Positioning Playground. is free software: you can
+redistribute it and/or modify it under the terms of version 3 of the GNU General
+Public  License as published by the Free Software Foundation.
+
+The Programming By Stealth CSS Positioning Playground is distributed in the hope
+that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with
+The Programming By Stealth Positioning Playground.  If not, see
+<http://www.gnu.org/licenses/>.
+-->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>PBS - CSS Positioning Playground</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="contrib/jquery-2.2.0.min.js"></script>
+  <script src="index.js"></script>
+</head>
+<body>
+
+<!-- The page header -->
+<header>
+  <h1>PBS - CSS Positioning Playground</h1>
+  <h2>Part of the <a href="http://www.bartb.ie/pbs">Programming by Stealth</a>
+  Series by <a href="http://www.bartb.ie/">Bart Busschots</a></h2>
+</header>
+
+<!-- the main content of the page -->
+<main>
+
+  <!-- The Initialiser -->
+  <div id="initiailiser">
+    <h2>Getting Started</h2>
+
+    <p>When you press the 'start' button below, a new window will pop up
+    containing five boxes, a <span class="box box1">red one</span>, a
+    <span class="box box2">green one</span>, a
+    <span class="box box3">blue one</span>, a <span class="box box4">yellow
+    one</span>, and a <span class="box box5">magenta one</span>. The
+    <span class="box box1">red</span>, <span class="box box2">green</span>, and
+    <span class="box box3">blue</span> boxes are top-level
+    <code>&lt;div&gt;</code> tags, added to the HTML document in that order.
+    The <span class="box box4">yellow</span> and
+    <span class="box box5">magenta</span> boxes are both
+    <code>&lt;div&gt;</code> tags contained within the
+    <span class="box box2">green box</span>, the <span class="box box4">yellow
+    one</span> first, then the <span class="box box5">magenta one</span>.</p>
+
+    <p>When you press the <strong>Lets Begin Now</strong> button a control panel will also appear below, allowing you to see and edit the CSS properties for each of the five boxes in the pop-up window. The controls are color-coded to show which box they control. As you change the values in the control panel, the boxes will update appropriately in the pop-up window, and, as you re-size the pop-up window, the values in the control panel will update too.</p>
+
+    <p style="font-style: italic">You will have to allow the pop-up through your
+    pop-up blocker for this demo to work.</p>
+
+    <form>
+    <p><button type="button" id="start_btn">Lets Begin Now!</button></p>
+    </form>
+  </div>
+
+  <div id="main_interface">
+    <!-- The controls for doing the manipulation -->
+    <form><fieldset id="controls">
+      <legend>Control Panel</legend>
+
+      <!-- container for the box controllers -->
+      <div id="box_controls_container"></div>
+  </fieldset></form>
+
+  <aside>
+    <h1>The HTML</h1>
+    <pre>
+...
+&lt;body>
+  &lt;div id="box1" class="box"&gt;&lt;/div&gt;
+  &lt;div id="box2" class="box"&gt;
+    &lt;div id="box4" class="box"&gt;&lt;/div&gt;
+    &lt;div id="box5" class="box"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div id="box3" class="box"&gt;&lt;/div&gt;
+&lt;/body&gt;
+...
+    </pre>
+  </aside>
+  <h2>Tip</h2>
+  <p>To build the two-column layout with header and footer as shown in the
+  demo at the end of <a href="https://www.bartbusschots.ie/s/2016/02/03/programming-by-stealth-8-of-x-css-positioning/" target="_blank">PBS instalment 8</a>,
+  take the steps below. <span class="box box1">Box 1</span> will be used at the
+  header, <span class="box box2">box 2</span> simply contains the middle parts
+  of the page, with <span class="box box4">box 4</span> being the main content,
+  and <span class="box box5">box 5</span> becoming the side bar. Finally,
+  <span class="box box3">box 3</span> will be the footer.</p>
+  <ol>
+    <li>Create some space to move the side-bar into by setting the
+      <strong>left margin of <span class="box box4">box 4</span> to
+      <code>140px</code></strong>. This value is the sum of the width we will
+      set the side-bar to (<code>100px</code>) and twice the <code>20px</code>
+      margins in use around all the boxes.</li>
+    <li><strong>Set the width of <span class="box box5">box 5</span> to
+      <code>100px</code>.</strong></li>
+    <li><strong>Set the position of <span class="box box5">box 5</span> to
+      <code>absolute</code></strong>. Notice that it has now been pulled out
+      of the normal flow of the document, causing <span class="box box2">box
+      2</span> to shrink, and hence <span class="box box3">box 3</span> to move
+      up.</li>
+    <li><strong>Set the top and left of <span class="box box5">box 5</span> to
+      <code>0px</code></strong>. Because this box is not contained within
+      any <em>positioned</em> boxes, its position has been calculated relative
+      to the body of the page. Because it has a 20 pixel margin, the visible
+      part of the box now appears 20 pixels down from the top of the body, and
+      20 pixels in from its left - over <span class="box box1">box 1</span>.</li>
+    <li>To make the positioning of the sidebar (<span class="box box5">box
+      5</span>) be relative to the central region (<span class="box box2">box
+      2</span>), we need to turn that box into a <em>positioned</em> box by
+      setting its <code>position</code> to something other than
+      <code>static</code> that will not pull it out of the normal flow, nor
+      alter its placement within the document - <strong>set the position of
+      <span class="box box2">box 2</span> to <code>relative</code></strong></li>
+  </ol>
+</main>
+</body>
+</html>

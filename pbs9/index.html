@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>PBS 9 - Demo</title>
+</head>
+<body>
+<header>
+<h1>PBS 9 - Demo</h1>
+<h2>Part of the Programming by Stealth Series by Bart Busschots</h2>
+</header>
+<div id="central_region">
+<main>
+  <article>
+    <h1><code>display: inline-block</code> Demo</h1>
+    <p>Elements displayed as inline block behave like they are single letters,
+    no matter how big they are. To prove the point, here's a modern-day variant
+    of an Egyptian Cartouche, using emoji instead of ancient pictograms:
+    <span class="cartouche"><img src="contrib/twemoji/16x16/1f4f7.png" alt="Camera" /><img src="contrib/twemoji/16x16/1f6b4.png" alt="Mountain Bike" /><br /><img src="contrib/twemoji/16x16/1f427.png" alt="Linux Penguin" /><img src="contrib/twemoji/16x16/1f52d.png" alt="Telescope" /></span>.
+    I chose four of my favourite things as my emoji cartouche - a camera because
+    I like photography, a bike becuase I enjoy cycling, a Linux Penguin because
+    I like computers, and a telescope because I love Astronomy.</p>
+  </article>
+
+  <article>
+    <h1>Flex Box Demo</h1>
+    <p>The layout of the central region of this page is done using flex box -
+    the side bar is one flex item, and main content is another.</p>
+
+    <p>While flex box is very useful for layouts, it's just as useful for
+    smaller elements on a page. For example, below are three nicely re-sizing
+    boxes containing podcast suggestions as a flex box:</p>
+
+    <div id="podcast_tips">
+      <figure class="podcast">
+        <p><a href="http://www.podfeet.com/blog/category/nosillacast/" target="_blank"><img alt="NosillaCast Logo" src="podcastLogos/NosillaCast.png" class="podcast_logo" /></a></p>
+        <h1>The NosillaCast</h1>
+        <h2>By Allison Sheridan</h2>
+        <p>A Technology Geek Podcast with an eeeeever so slight Macintosh bias</p>
+      </figure>
+      <figure class="podcast">
+        <p><a href="http://www.podfeet.com/blog/category/ccatp/" target="_blank"><img alt="CCATP Logo" src="podcastLogos/CCATP.png" class="podcast_logo" /></a></p>
+        <h1>Chit Chat Across the Pond</h1>
+        <h2>By Allison Sheridan</h2>
+        <p>A a weekly interview show about all things tech.</p>
+      </figure>
+      <figure class="podcast">
+        <p><a href="http://www.lets-talk.ie/apple" target="_blank"><img alt="Let's Talk Apple Logo" src="podcastLogos/LTA.png" class="podcast_logo" /></a></p>
+        <h1>Let's Talk Apple</h1>
+        <h2>By Bart Busschots</h2>
+        <p>A monthly Apple news show that takes the broader view.</p>
+      </figure>
+    </div>
+  </article>
+</main>
+<div id="sidebar">
+  <!-- The About the Author box -->
+  <div id="about_author">
+    <h1>The Author</h1>
+    <div id="author_card">
+      <img src="avatar.png" alt="Avatar" />
+      <span id="author_name">Bart Busschots</span><br />
+      <a href="http://www.bartb.ie/">www.bartb.ie</a>
+    </div>
+  </div>
+
+  <!-- The useful links navigation area -->
+  <nav>
+    <h1>Useful Links</h1>
+    <ul>
+      <li>Pograming By Stealth Series</li>
+      <li>Chit Chat Across the Pond Podcast</li>
+      <li>W3Schools CSS Reference</li>
+    </ul>
+  </nav>
+</div> <!-- End of side bar -->
+</div> <!-- End of central section of page -->
+<footer>
+All Content by Bart Busschots - released under CC-NC-By License
+</footer>
+</body>
+</html>
