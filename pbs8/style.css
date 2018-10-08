@@ -147,15 +147,7 @@ div#author_card{
   font-size: 10pt;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   color: #666666;
-<<<<<<< HEAD
   overflow: auto; /* make sure the box expands to surround the floated avatar */
-=======
-<<<<<<< HEAD
-  overflow: auto; /* make sure the box expands to surround the floated avatar */
-=======
-  overflow: auto; /* make sure the box expands to surround the floaded avatar */
->>>>>>> d2e7c46a8a192643cbbcfbdda4d175c9b48b3a15
->>>>>>> 8ff0917a2f6fb050f15e118032223e48e812ecfa
 }
 div#author_card img{
   width: 50px;
