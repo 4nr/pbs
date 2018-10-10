@@ -1,0 +1,151 @@
+/*
+Styles for PBS9 Demo
+*/
+
+/* Set the default text style for the whole page */
+body{
+  /* display: none; */
+  /* ^^ hilarious trick! jk */
+  font-family: Verdana, Geneva, sans-serif;
+  text-align: justify;
+  padding: 0px;
+  margin: 0px;
+  font-size: 12pt;
+}
+/* Style the header and footer */
+header, footer{
+  margin: 0px;
+  padding: 5px;
+  background-color: #0000bb;
+  color: grey;
+  font-size: 10px;
+}
+header{
+  margin-bottom: 10px;
+}
+footer{
+  margin-top: 10px;
+  clear: both;
+}
+header h1, header h2{
+  margin: 0px;
+  font-weight: normal;
+}
+header h1{
+  text-transform: uppercase;
+  color: white;
+  font-size: 32px;
+}
+header h2{
+  font-size: 16px;
+}
+footer{
+  font-style: italic;
+}
+
+/* lay out the central region of the page*/
+div#central_region{
+  display: flex;
+}
+main{
+  flex: 1;
+  padding: 10px;
+  border-left: 1px dashed #0000bb;
+  overflow: auto;
+  order: 2;
+}
+div#sidebar{
+  width: 200px;
+  flex: none;
+  color: #0000bb;
+  font-size: 12px;
+  order: 1;
+  margin: 0px 10px;
+}
+div#sidebar h1{
+  font-size: 20px;
+  border-top: 1px dotted #0000bb;
+  border-bottom: 1px dotted #0000bb;
+  padding: 2px 0px;
+}
+div#sidebar ul{
+  padding-left: 20px;
+}
+div#sidebar li{
+  padding: 2px 0px;
+}
+
+/* style the main content */
+article{
+  clear: both; /* Clear all floats before starting a new article */
+}
+article h1{
+  font-size: 18pt;
+}
+
+/* style the cartouche */
+span.cartouche{
+  display: inline-block;
+  padding: 1px;
+  background-color: Lightblue;
+  border: 1px solid DimGrey;
+  border-radius: 10px;
+  vertical-align: middle;
+  margin: 1px;
+}
+span.cartouche img{
+  margin: 1px;
+  width: 16px;
+  height: 16px;
+}
+
+/* style the about the author box */
+div#author_card{
+  border: 1px dotted DarkGrey;
+  border-radius: 10px;
+  background-color: LightYellow;
+  padding: 10px;
+  font-size: 10pt;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  color: #666666;
+  overflow: auto; /* make sure the box expands to surround the floated avatar */
+}
+div#author_card img{
+  width: 50px;
+  float: left;
+  margin-right: 5px;
+}
+span#author_name{
+  font-weight: bold;
+}
+
+/* Style the podcasts list (flex box) */
+#podcast_tips{
+  display: flex;
+  color: DimGrey;
+  font-size: 10pt;
+}
+figure.podcast{
+  flex: 1;
+  text-align: center;
+}
+figure.podcast h1, figure.podcast h2, figure.podcast p{
+  margin: 0px;
+  padding: 2px;
+}
+figure.podcast h1{
+  font-size: 14pt;
+}
+figure.podcast h2{
+  font-size: 12pt;
+  font-weight: normal;
+  font-style: italic;
+}
+img.podcast_logo{
+  /* width: auto; */
+  /* ^^ bad idea */
+  height: 200px;
+  border: 1px solid DimGrey;
+  border-radius: 5px;
+  margin: 0px;
+}
