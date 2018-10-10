@@ -1,37 +1,22 @@
 /*
-<<<<<<< HEAD
 Styles for PBS9 Demo
-=======
-Styles for PBS7 Demo
->>>>>>> f6a28387de21b8253f58a5d098f27707b95091ef
 */
 
 /* Set the default text style for the whole page */
 body{
-<<<<<<< HEAD
   /* display: none; */
   /* ^^ hilarious trick! jk */
-=======
->>>>>>> f6a28387de21b8253f58a5d098f27707b95091ef
   font-family: Verdana, Geneva, sans-serif;
   text-align: justify;
   padding: 0px;
   margin: 0px;
   font-size: 12pt;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> f6a28387de21b8253f58a5d098f27707b95091ef
 /* Style the header and footer */
 header, footer{
   margin: 0px;
   padding: 5px;
-<<<<<<< HEAD
   background-color: #0000bb;
-=======
-  background-color: #000099;
->>>>>>> f6a28387de21b8253f58a5d098f27707b95091ef
   color: grey;
   font-size: 10px;
 }
@@ -65,35 +50,22 @@ div#central_region{
 main{
   flex: 1;
   padding: 10px;
-<<<<<<< HEAD
   border-left: 1px dashed #0000bb;
-=======
-  border-left: 1px dashed #000099;
->>>>>>> f6a28387de21b8253f58a5d098f27707b95091ef
   overflow: auto;
   order: 2;
 }
 div#sidebar{
   width: 200px;
   flex: none;
-<<<<<<< HEAD
   color: #0000bb;
-=======
-  color: #000099;
->>>>>>> f6a28387de21b8253f58a5d098f27707b95091ef
   font-size: 12px;
   order: 1;
   margin: 0px 10px;
 }
 div#sidebar h1{
   font-size: 20px;
-<<<<<<< HEAD
   border-top: 1px dotted #0000bb;
   border-bottom: 1px dotted #0000bb;
-=======
-  border-top: 1px dotted #000099;
-  border-bottom: 1px dotted #000099;
->>>>>>> f6a28387de21b8253f58a5d098f27707b95091ef
   padding: 2px 0px;
 }
 div#sidebar ul{
@@ -136,11 +108,7 @@ div#author_card{
   font-size: 10pt;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   color: #666666;
-<<<<<<< HEAD
   overflow: auto; /* make sure the box expands to surround the floated avatar */
-=======
-  overflow: auto; /* make sure the box expands to surround the floaded avatar */
->>>>>>> f6a28387de21b8253f58a5d098f27707b95091ef
 }
 div#author_card img{
   width: 50px;
@@ -174,11 +142,8 @@ figure.podcast h2{
   font-style: italic;
 }
 img.podcast_logo{
-<<<<<<< HEAD
   /* width: auto; */
   /* ^^ bad idea */
-=======
->>>>>>> f6a28387de21b8253f58a5d098f27707b95091ef
   height: 200px;
   border: 1px solid DimGrey;
   border-radius: 5px;
