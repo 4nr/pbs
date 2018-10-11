@@ -1,0 +1,61 @@
+/* learning how to do this css positioning stuff! */
+body{
+  background-color: #1485cc;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  margin: 0px 10%;
+  overflow: auto;
+}
+header, footer{
+  background-color: #45438c;
+  color: #c9a700;
+  text-align: center;
+  padding: 20px;
+}
+main{
+  display: flex;
+  background-color: #ddd;
+  /* margin: 10px 50px; */
+  text-align: left;
+}
+div#sidebar_left{
+  margin-right: 0px;
+  order: 1;
+}
+div#central{
+  margin: 0px 10px;
+  padding: 10px;
+  flex: 3;
+  order: 2;
+  border: 6px double #45438c;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  min-width: 400px;
+}
+div#sidebar_right{
+  margin-left: 0px;
+  order: 3;
+}
+div.sidebar{
+  margin: 10px;
+  padding: 0px 10px;
+  flex: 1;
+  background-color: #bbb;
+}
+ul.links a{
+  text-decoration: none;
+}
+figure{
+  width: 50%;
+  float: right;
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  border: 1px dotted gray;
+}
+figure img{
+  width: 100%;
+}
+figcaption{
+  font-style: italic;
+  font-size: 9pt;
+}
