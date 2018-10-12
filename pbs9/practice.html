@@ -27,7 +27,58 @@
         </p>
       </article>
       <article>
-
+        <h2>CSS Layout Properties</h2>
+        <h3>Review</h3>
+        <dl>
+          <dt>
+            Float
+          </dt>
+          <dd>
+            float: none (default) | left | right; property is declared and tag is removed from the normal flow, tags above and below move to meet, floated tag swims in lower content.
+          </dd>
+          <dt>
+            Clear
+          </dt>
+          <dd>
+            clear: none (default) | left | right | both; property on a tag declares whether a tag from above is prohibited from penetrating into the top of it. ie: no prohibitions | left half | right half | both halves prohibited.
+          </dd>
+          <dt>
+            Position
+          </dt>
+          <dd>
+            position: static (default) | fixed | absolute | relative;
+          </dd>
+          <dd>
+            static - not considered positioned, just normal flow
+          </dd>
+          <dd>
+            fixed - out of normal flow, defined in relation to browser window
+          </dd>
+          <dd>
+            absolute - out of normal flow, defined in relation to nearest positioned parent
+          </dd>
+          <dd>
+            relative - place-holder remains in normal flow, optionally specify offset
+          </dd>
+          <dt>
+            z-index
+          </dt>
+          <dd>
+            think in terms of layering. for unpositioned (static) boxes simply nest tags, for positioned elements specifying a z-index: [whole number] will stack tags like sheets of paper with larger numbers in front.
+          </dd>
+          <dt>
+            Display
+          </dt>
+          <dd>
+            tags that are normally block | inline | inline-block can be switched to another using <code>display: [value];</code>or vanished using <code>display: none;</code>
+          </dd>
+          <dd>
+            create a flex box using <code>display: flex;</code> and its immediate children will become flex items and displayed as columns
+          </dd>
+          <dd>
+            a child element can have <code>flex: [1|2|3|etc];</code> to specify its width relative to siblings, and <code>order: [1|2|3|etc];</code> to specify appearance order left to right.
+          </dd>
+        </dl>
       </article>
     </div>
     <div class="sidebar" id="sidebar_left">
