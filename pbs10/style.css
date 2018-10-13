@@ -1,0 +1,101 @@
+/*
+Styles for PBS 10 Demo
+*/
+
+/* Set the default text style for the whole page */
+body{
+  font-family: courier, monospace;
+  /* font-family: Verdana, Geneva, sans-serif; */
+  text-align: justify;
+  padding: 0px;
+  margin: 0px;
+  font-size: 10pt;
+}
+main{
+  margin: 10px;
+}
+
+/* Style the header */
+header, footer{
+  margin: 0px;
+  /* margin-bottom: 10px; */
+  padding: 5px;
+  background-color: DimGrey;
+  color: LightGrey;
+  font-size: 10px;
+}
+header a:visited, header a:link, header a:active{
+  color: LightGrey;
+}
+header a:hover{
+  color: white;
+}
+
+/*
+  Regular lists
+ */
+
+/* set up the list basics */
+ul, ol{
+    padding-left: 1em;
+    margin: 0em 1em;
+}
+
+/* nested ordered lists */
+ol{ /* top-level elements */
+  list-style-type: decimal;
+}
+ol ol{ /* nested bulleted lists */
+  list-style-type: lower-alpha;
+}
+ol ol ol{ /* doubly-nested lists */
+  list-style-type: lower-roman;
+}
+
+/* nested unordered lists with images */
+ul.arrows{
+    list-style-image: url(contrib/fugue-icons-3.5.6/icons-shadowless/arrow-000-medium.png);
+}
+ul.arrows ul.arrows{
+    list-style-image: url(contrib/fugue-icons-3.5.6/icons-shadowless/arrow-000-small.png);
+}
+
+/* make the first letter of paragraphs that come directly after third-level headers bold */
+h3 + p::first-letter{
+    font-weight: bold;
+}
+
+/*
+The zebra-patterned list
+*/
+
+/* style the containing list */
+ul.zebra{
+    /* remove the left indentation */
+    padding: 0px;
+    margin: 0px;
+}
+
+/* style the list items */
+ul.zebra li{
+    list-style-type: none; /* remove the numbers */
+    border-top: 1px dashed LightGrey; /* add a border to the top of each item */
+    padding: 2px; /* add some padding for clarity */
+    background-color: #ffffe6; /* set the default background color */
+}
+
+/* add a bottom border to only the last item */
+ul.zebra li:last-child{
+    border-bottom: 1px dashed LightGrey;
+}
+
+/* change the background colour for the odd-numbered items */
+ul.zebra li:nth-of-type(even){
+    background-color: #eafaea;
+}
+
+/* add the hover zoom */
+ul.zebra li:hover{
+    font-weight: bold;
+    font-size: bigger;
+}

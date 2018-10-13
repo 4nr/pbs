@@ -2,6 +2,7 @@
 body{
   background-color: #1485cc;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: larger;
   margin: 0px 10%;
   overflow: auto;
 }
@@ -11,6 +12,12 @@ header, footer{
   text-align: center;
   padding: 20px;
 }
+h1{
+  text-transform: uppercase;
+}
+/* h2, h3{
+  font-size: larger;
+} */
 main{
   display: flex;
   background-color: #ddd;
@@ -43,6 +50,13 @@ div.sidebar{
 }
 ul.links a{
   text-decoration: none;
+}
+.links{
+  margin: 0px 10px;
+  padding-left: 10px;
+  list-style: square outside;
+  /* list-style-type: none; */
+  /* ^^^ to remove bullets or numbers */
 }
 figure{
   width: 50%;
