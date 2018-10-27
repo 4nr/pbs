@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>PBS 11 - Demo</title>
+</head>
+<body>
+
+<!-- The page header -->
+<header>
+  <h1>PBS 11 - Demo</h1>
+  <h2>Part of the <a href="http://www.bartb.ie/pbs">Programming by Stealth</a>
+  Series by <a href="http://www.bartb.ie/">Bart Busschots</a></h2>
+</header>
+
+<!-- the main content of the page -->
+<main>
+<p>Below is a table with a caption, table header, single-celled
+table footer, and a table body.</p>
+
+<table class="basic" id="logs_table">
+  <caption>The Table Caption That Describes Some Dummy Data</caption>
+  <thead>
+    <tr>
+      <th>Current Status</th>
+      <th>Unix Time Stamp</th>
+      <th>ISO 8601 Date</th>
+      <th>Username</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th colspan="5"><em>Most</em> data in this table is fictitious.</th>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <th>active</th>
+      <td>1458047799</td>
+      <td>2016-03-15 13:16:39 GMT</td>
+      <td>tcook</td>
+      <td>Domain Logon</td>
+    </tr>
+    <tr>
+      <th>active</th>
+      <td>1458044468</td>
+      <td>2016-03-15 12:21:08 GMT</td>
+      <td>ecue</td>
+      <td>Password Reset</td>
+    </tr>
+    <tr>
+      <th>disabled</th>
+      <td>1458044049</td>
+      <td>2016-03-15 12:14:09 GMT</td>
+      <td>jive</td>
+      <td>WiFi Login</td>
+    </tr>
+    <tr>
+      <th>deprecated</th>
+      <td>1458040530</td>
+      <td>2016-03-15 11:15:30 GMT</td>
+      <td>tcook</td>
+      <td>CMS Login</td>
+    </tr>
+    <tr>
+      <th>active</th>
+      <td>1457978239</td>
+      <td>2016-03-14 17:57:19 GMT</td>
+      <td>aahrendts</td>
+      <td>Stock Tracking System Login</td>
+    </tr>
+    <tr>
+      <th>initiated</th>
+      <td>3.14159265</td>
+      <td>2018-10-16 12:04:15 EDT</td>
+      <td>jkane</td>
+      <td>Software Development Training</td>
+    </tr>
+  </tbody>
+</table>
+<h2>A Table With Truncated Cells</h2>
+
+ <p>Long un-breakable text like URLs can really mess up your table - one
+ solution is to truncate such overly long data when it meets the edge of a
+ cell, as shown below:</p>
+
+ <table id="cool_urls" class="greenbar_report">
+   <caption>Some Cool URLs</caption>
+   <thead>
+     <tr>
+       <th>Title</th>
+       <th>URL</th>
+       <th>Description</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>Chit Chat Across the Pond</td>
+       <td><a href="http://www.podfeet.com/blog/category/ccatp/" target="_blank">www.podfeet.com/blog/category/ccatp/</a></td>
+       <td>A weekly chat show hosted by Allison Sheridan with a nerdy guest of some kind.</td>
+     </tr>
+     <tr>
+       <td>Taming the Terminal</td>
+       <td><a href="http://www.bartb.ie/pbs" target="_blank">www.bartb.ie/pbs</a></td>
+       <td>Bart and Allison explain the Terminal.</td>
+     </tr>
+     <tr>
+       <td>Let's Talk Apple</td>
+       <td><a href="http://www.lets-talk.ie/apple" target="_blank">www.lets-talk.ie/apple</a></td>
+       <td>A monthly Apple panel discussion show hosted by Bart.</td>
+     </tr>
+   </tbody>
+ </table>
+</main>
+<footer>
+  <h2>
+    Completed on October 26, 2018<br />by Jonathan Kane
+  </h2>
+</footer>
+</body>
+</html>

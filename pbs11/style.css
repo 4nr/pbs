@@ -1,0 +1,131 @@
+h1{
+  /* text-align: center; */
+  color: #ddd;
+  /* background-color: darkblue; */
+  padding: 0.5em;
+}
+
+table.basic{
+  width: 100%;
+  /* margin: 20px; */
+  border-collapse: collapse;
+  font-family: monospace;
+  font-size: 10pt;
+  text-align: left;
+  background-color: #ddd;
+  table-layout: fixed;
+}
+caption{
+  caption-side: bottom;
+  padding: 1em;
+  /* padding-bottom: 2em; */
+}
+/* set the column widths on the logs table */
+#logs_table thead th:nth-child(1){
+  width: 17%;
+}
+#logs_table thead th:nth-child(2){
+  width: 18%;
+}
+#logs_table thead th:nth-child(3){
+  width: 25%;
+}
+#logs_table thead th:nth-child(4){
+  width: 10%;
+}
+#logs_table thead th:nth-child(5){
+  width: 30%;
+}
+
+table.basic th, table.basic td{
+  border: 1px solid black;
+  /* border-spacing: 0px; */
+}
+table.basic caption, table.basic tfoot{
+  text-align: center;
+}
+th, td{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+th{
+  text-transform: uppercase;
+}
+
+/* Style the header */
+header, footer{
+  margin: 0px;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  background-color: #555;
+  color: LightGrey;
+  font-size: 10pt;
+  text-align: center;
+}
+header a{
+  text-decoration: none;
+}
+header a:visited, header a:link, header a:active{
+  color: LightGrey;
+}
+header a:hover{
+  color: white;
+}
+
+/*
+Style Greenbar tables
+*/
+
+/* apply styles to the table */
+table.greenbar_report{
+  width: 100%; /* make the table full-width */
+  border-collapse: collapse; /* collapse the borders (excel-like table) */
+  table-layout: fixed; /* disable automatic column sizing */
+}
+
+/* Style the Caption */
+table.greenbar_report caption{
+  text-align: left;
+  font-weight: bold;
+  padding: 0.5em 0em;
+}
+
+/* style the header and footer */
+table.greenbar_report thead, table.greenbar_report tfoot{
+  border-top: 1px solid DimGrey;
+  border-bottom: 1px solid DimGrey;
+  color: DimGray;
+  background-color: LightYellow;
+}
+table.greenbar_report thead th, table.greenbar_report tfoot th{
+  font-weight: normal;
+}
+table.greenbar_report tfoot th{
+  font-style: italic;
+}
+
+/* style the rows */
+table.greenbar_report tbody tr:nth-of-type(odd){
+  background-color: #e6fee6;
+}
+table.greenbar_report tbody tr:nth-of-type(even){
+  background-color: White;
+}
+table.greenbar_report tbody tr:hover{
+  font-weight: bold;
+  background-color: AliceBlue;
+  border-top: 1px dotted DimGray;
+  border-bottom: 1px dotted DimGray;
+}
+
+/* style the data cells */
+table.greenbar_report tbody td{
+    vertical-align: top;
+}
+
+/* set the URLs column to truncate */
+#cool_urls tbody td:nth-child(2){
+  white-space: nowrap; /* keep URLs on one line, even if they have a - */
+  overflow-x: hidden; /* hide horizontal overflows */
+  text-overflow: ellipsis; /* indicate that text has been truncated */
+}
