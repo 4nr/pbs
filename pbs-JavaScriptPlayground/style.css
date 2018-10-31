@@ -1,0 +1,84 @@
+/*
+Styles for PBS JavaScript Playground
+
+Copyright 2016 Bart Busschots
+
+This file is part of the Programming By Stealth JavaScript Playground.
+
+The Programming By Stealth JavaScript Playground is free software: you can
+redistribute it and/or modify it under the terms of version 3 of the GNU General
+Public License as published by the Free Software Foundation.
+
+The Programming By Stealth JavaScript Playground is distributed in the hope
+that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with
+The Programming By Stealth Positioning Playground. If not, see
+<http://www.gnu.org/licenses/>.
+*/
+
+/* Set the default text style for the whole page */
+body{
+  font-family: Verdana, Geneva, sans-serif;
+  text-align: justify;
+  padding: 0px;
+  margin: 0px;
+  font-size: 10pt;
+}
+main{
+  margin: 10px;
+}
+h3{
+  display: inline;
+}
+
+/* Style the header and footer */
+header, footer{
+  margin: 0px;
+  /* margin-bottom: 10px; */
+  padding: 5px;
+  background-color: DimGrey;
+  color: LightGrey;
+  font-size: 10px;
+}
+header a:visited, header a:link, header a:active{
+  color: LightGrey;
+}
+header a:hover{
+  color: white;
+}
+
+/* Style the code mirror box */
+.CodeMirror{
+  height: auto;
+  border: 1px solid #ddd;
+  margin: 0px 10px;
+}
+.CodeMirror-scroll{
+  /* max-height: 200px; */
+}
+.CodeMirror pre{
+  padding-left: 7px;
+  line-height: 1.25;
+}
+
+/* Style the output region */
+.console{
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  overflow: auto;
+}
+.console pre{
+  margin: 0px;
+  font-size: 16px;
+}
+.console pre.error{
+  color: DarkRed;
+  padding-left: 20px;
+  background-image: url(contrib/famfamfam_silk_icons_v013/icons/error.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+}
