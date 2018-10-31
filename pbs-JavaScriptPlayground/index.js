@@ -19,7 +19,7 @@ You should have received a copy of the GNU General Public License along withThe 
 //
 
 // the relative URL to the playground
-var PLAGROUND_URL = 'playground.html';
+var PLAYGROUND_URL = 'playground.html';
 
 //
 // --- Initialization Code -------------------------------------------------- //
@@ -32,7 +32,7 @@ $(document).ready(function(){
     if($iframe.prop('src')){
       $iframe.get()[0].contentWindow.location.reload();
     }else{
-      $iframe.prop('src', PLAGROUND_URL);
+      $iframe.prop('src', PLAYGROUND_URL);
     }
   });
 
