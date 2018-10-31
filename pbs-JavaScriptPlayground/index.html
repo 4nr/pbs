@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<!--
+Copyright 2016 Bart Busschots
+
+This file is part of the Programming By Stealth JavaScript Playground.
+
+The Programming By Stealth JavaScript Playground is free software: you can redistribute it and/or modify it under the terms of version 3 of the GNU General Public License as published by the Free Software Foundation.
+
+The Programming By Stealth JavaScript Playground is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with The Programming By Stealth Positioning Playground, if not, see <http://www.gnu.org/licenses/>.
+-->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>PBS - JavaScript Playground</title>
+
+  <!-- Import JQuery -->
+  <script src="contrib/jquery-2.2.0.min.js"></script>
+
+  <!-- Import CodeMirror -->
+  <script src="contrib/CodeMirror/lib/codemirror.js"></script>
+  <link rel="stylesheet" href="contrib/CodeMirror/lib/codemirror.css" />
+  <script src="contrib/CodeMirror/mode/javascript/javascript.js"></script>
+
+  <!-- own includes -->
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="index.js"></script>
+</head>
+<body>
+
+<!-- The page header -->
+<header>
+  <h1>PBS - JavaScript Playground</h1>
+  <h2>Part of the <a href="http://www.bartb.ie/pbs">Programming by Stealth</a>
+  Series by <a href="http://www.bartb.ie/">Bart Busschots</a></h2>
+</header>
+
+<!-- the main content of the page -->
+<main>
+  <h2>Instructions</h2>
+
+  <p>Type your JavaScript Code into the text area below, then click the <em>Run</em> button to execute it. Any output from the code will show in the output section at the bottom of this page.</p>
+
+  <p>Your JavaScript code should use the <em>custom</em> function <code>pbs.say()</code>to output text to the output area.</p>
+
+  <p>You can use the three text boxes above the run button to pass inputs to your code. You can access individual inputs with <code>pbs.input(n)</code> where <code>n</code> is <code>1</code>, <code>2</code>, or <code>3</code>. You can also access all the non-empty values as an array with <code>pbs.inputs()</code>.</p>
+
+  <h2>Your Code</h2>
+  <form>
+  <textarea id="code_editor">pbs.say("Hello World!");</textarea>
+  <script>
+    var codeEditor = CodeMirror.fromTextArea(document.getElementById('code_editor'), {
+      mode:  "javascript",
+      lineNumbers: true
+    });
+  </script>
+  <p><h3>Inputs:</h3>
+  <input type="text" placeholder="input 1" id="pbs_input_1" />
+  <input type="text" placeholder="input 2" id="pbs_input_2" />
+  <input type="text" placeholder="input 3" id="pbs_input_3" /></p>
+  <p><button type="button" id="run_btn">Run</button></p>
+  </form>
+  <h2>Output</h2>
+  <iframe id="pbs_output_iframe"></iframe>
+</main>
+<footer>
+  <h2>Created 09APR2016<br />by Bart Busschots</h2>
+  <h2>Learned 31OCT2018<br />by Jonathan Kane</h2>
+</footer>
+</body>
+</html>
