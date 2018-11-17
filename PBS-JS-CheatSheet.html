@@ -1,0 +1,491 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>PBS - JavaScript Cheat-Sheet</title>
+  <style type="text/css">
+  <!--/*--><![CDATA[/*><!-- */
+
+    /* Document-wide defaults */
+    body{
+    	font-family: Verdana, Geneva, sans-serif;
+  		text-align: left;
+  		padding: 0px;
+  		margin: 0px;
+  		font-size: 10pt;
+  		color: Black;
+    }
+    main{
+    	margin: 10px;
+    }
+    a:link, a:active, a:visited{
+    	color: blue;
+    	text-decoration: none;
+    }
+    a:hover{
+      color: blue;
+    	text-decoration: underline;
+    }
+    pre, code{
+    	color: MidnightBlue;
+    }
+
+    /* Style the page header */
+    header, footer{
+    	margin: 0px;
+    	margin-bottom: 10px;
+    	padding: 5px;
+    	background-color: DimGrey;
+    	color: LightGrey;
+    	font-size: 10px;
+    }
+    header a:visited, header a:link, header a:active{
+    	color: LightGrey;
+    }
+    header a:hover{
+    	color: white;
+    }
+
+    /* Style the sections */
+    section{
+    	display: inline-block;
+    	width: 500px;
+    	vertical-align: top;
+    	background-color: Cornsilk;
+    	border: 1px dashed DimGrey;
+    	border-radius: 10px;
+    	margin: 10px;
+    	padding: 10px;
+    	overflow-x: auto;
+    }
+    section h1{
+    	font-size: 14pt;
+    }
+    section h2{
+    	font-size: 12pt;
+    }
+
+  /*]]>*/-->
+  </style>
+
+  <script type="text/javascript">
+  //<![CDATA[
+
+  // The PBS instalment URLs
+  var PBS_URLS = {
+  	'PBS 12': 'https://www.bartbusschots.ie/s/2016/04/01/programming-by-stealth-12-of-x-javascript-intro/',
+  	'PBS 13': 'https://www.bartbusschots.ie/s/2016/04/09/programming-by-stealth-13-of-x-javascript-conditionals/',
+  	'PBS 14': 'https://www.bartbusschots.ie/s/2016/05/12/programming-by-stealth-14-of-x-javascript-loops-arrays/',
+  	'PBS 15': 'https://www.bartbusschots.ie/s/2016/05/27/programming-by-stealth-15-of-x-javascript-functions/',
+  	'PBS 16': 'https://www.bartbusschots.ie/s/2016/06/08/programming-by-stealth-16-of-x-javascript-function-objects/',
+  	'PBS 17': 'https://www.bartbusschots.ie/s/2016/06/23/pbs-17-of-x-js-objects/',
+  	'PBS 18': 'https://www.bartbusschots.ie/s/2016/07/06/pbs-18-js-misc/'
+  };
+
+  // function to initialize all PBS links
+  function initPBSLinks(){
+  	// get references to all the links that need to be transformed
+  	var pbs_links = document.getElementsByClassName('pbs_link');
+
+  	// loop through the references and transform them
+  	for(var i = 0; i < pbs_links.length; i++){
+  		// get a reference to the link being transformed
+  		var a = pbs_links[i];
+
+  		// set the target to _blank
+  		a.target = '_blank';
+
+  		// set the href
+  		a.href = PBS_URLS[a.innerText];
+  	}
+  }
+
+  //]]>
+</script>
+</head>
+<body onload="initPBSLinks()">
+<header>
+  <h1>PBS - JavaScript Cheat-Sheet</h1>
+  <h2>Part of the Programming by Stealth Series</h2>
+</header>
+
+<main>
+<section>
+  <h1>Comments (<a class="pbs_link">PBS 12</a>)</h1>
+  <pre>
+// this is a comment
+// anything after two slashes on a line is ignored
+
+/* this is also a comment */
+
+/* This kind of comment can
+spread over multiple lines */
+  </pre>
+</section>
+
+<section>
+  <h1>Variables (<a class="pbs_link">PBS 12</a>)</h1>
+
+  <h2>Declaration</h2>
+  <pre>
+var x; // declare a variable
+var y = 4 // declare a variable with initial value
+y = 'boogers'; // assign a value to a variable
+  </pre>
+
+  <h2>Data Types</h2>
+  <pre>
+// numbers
+var x = 12;
+var y = -42;
+var z = 3.1415
+var a = -4.3;
+var b = 2.4e12; // 2.4 x 10^12
+
+// booleans
+var x = true;
+var y = false;
+
+// strings
+var x = 'a String';
+var y = "also a string";
+var z = "new line with \n, tab with \t";
+  </pre>
+
+  <h2>Type Conversions</h2>
+  <pre>
+var x = parseInt(y); // convert to integer number
+var a = parseFloat(b); // convert to floating point number
+var c = String(d); // convert to string
+var e = Boolean(f); // convery to boolean
+  </pre>
+
+  <h2>Special Values</h2>
+  <ul>
+    <li><code>NaN</code> not a number</li>
+    <li><code>undefined</code> the requested variable has not had a value set</li>
+    <li><code>null</code> an explicit non-value</li>
+  </ul>
+</section>
+
+<section>
+  <h1>Operators</h1>
+
+  <h2>String Operators (<a class="pbs_link">PBS 12</a>)</h2>
+  <pre>
+// concatenation
+var x = 'a string' + ' another string';
+  </pre>
+
+  <h2>Arithmentic Operators (<a class="pbs_link">PBS 12</a>)</h2>
+  <pre>
+var x = 4 + 5; // addition
+var y = 5 - 4; // subtraction
+var z = 6 * 7; // multiplication
+var a = 9 / 3; // division
+var b = 6 % 4; // modulous
+var c = 2 ** 5; // power of
+  </pre>
+
+  <h2>Shutcut Operators (<a class="pbs_link">PBS 12</a>)</h2>
+  <pre>
+x++; // x = x + 1;
+x--; // x = x - 1;
+x += y; // x = x + y;
+x -= y; // x = x - y;
+x *= y; // x = x * y;
+x /= y; // x = x / y;
+x %= y; // x = x % y;
+x **= y; // x = x ** y;
+  </pre>
+
+  <h2>Comparison Operators &amp; Functions (<a class="pbs_link">PBS 17</a>)</h2>
+  <pre>
+x === y // exactly equal
+x == y // effectively equal
+x = y // x gets y
+x &lt; y // less than
+x &gt; y // greater than
+x &lt;= y // less than or equal
+x &gt;= y // greater than or equal
+isNan(x) // check for NaN
+  </pre>
+
+  <h2>Logical Operators (<a class="pbs_link">PBS 13</a>)</h2>
+  <pre>
+x && y // AND
+x || y // OR
+!x // NOT
+  </pre>
+
+  <h2>Other Operators (<a class="pbs_link">PBS 16</a>)</h2>
+  <pre>
+// 'type' of variables/vales
+var s1 = typeof 4; // number
+var s2 = typeof 4.2; // number
+var s3 = typeof true; // boolean
+var s4 = typeof "a string"; // string
+var s5 = typeof Math.floor; // function
+var s6 = typeof Math; // object
+var s7 = [1, 2, 3]; // object - annoyingly
+
+// test against prototype
+var b1 = "test string" instanceof Array; // false
+var b2 = [1, 2, 3] instanceof Array; // true
+  </pre>
+</section>
+
+<section>
+  <h1>Strings (<a class="pbs_link">PBS 18</a>)</h1>
+  <p>JavaScript string manipulation functions are defined within the
+  <code>String</code> prototype.</p>
+
+  <pre>
+var s1 = "some sample string";
+
+var len = s1.length;
+var s2 = s1.toUpperCase();
+var s2 = s1.toLowerCase();
+var c = s1.charAt(4);
+var a = s1.split(' '); // split into array on space
+var b1 = s1.match(/[a-z]/);
+var s2 = s1.replace(/[ ]/g, '_'); // replace spaces with _
+var s2 = s1.replace(/(\d+)F/g, function(str, sub1){
+	return Math.round((sub1 - 32) * (5 / 9)) + "C";
+}); // convert F temps to C temps
+  </pre>
+
+</section>
+
+<section>
+  <h1>Arrays (<a class="pbs_link">PBS 14</a>)</h1>
+
+  <p>JavaScript arrays are objects with the <code>Array</code> prototype.</p>
+
+  <pre>
+var a = []; // create an empty array
+var b = [1, 'boogers', false]; // create an array with values
+var x = a[4]; // get value of element
+a[4] = 'boogers'; // set value of element
+  </pre>
+
+  <h2>Array Test</h2>
+  <pre>
+var a = [1, 2, 3];
+var b = a instanceof Array; // true
+  </pre>
+
+  <h2>Array Object Properties &amp; Functions</h2>
+  <pre>
+// length of array
+var a = [1, 2, 3];
+var len = a.length;
+
+// iterating over an array with callbacks (<a class="pbs_link">PBS 16</a>)
+a.forEach(function(v, i){
+	pbs.say('value at index ' + i + ' is ' + v);
+});
+
+// reverse an array (<a class="pbs_link">PBS 18</a>)
+a.reverse();
+
+// sort an array (<a class="pbs_link">PBS 18</a>)
+a.sort(); // lexical sort
+a.sort(function(a, b){
+  if(a < b) return -1;
+  if(b < a) return 1;
+  return 0;
+}); // numeric sort with callback
+
+// join into string (<a class="pbs_link">PBS 18</a>)
+var s1 = a.join(); // separate with ,
+var s2 = a.join('\n'); // separate with new line character
+
+// queue functions (<a class="pbs_link">PBS 18</a>)
+var q = [1, 2, 3];
+var n = q.shift(); // n = 1, q = [2, 3]
+q.unshift(1); // q = [1, 2, 3]
+
+// stack functions (<a class="pbs_link">PBS 18</a>)
+var s = [1, 2, 3];
+var n = s.pop(); // n = 3, q = [1, 2]
+s.push(3); // q = [1, 2, 3]
+  </pre>
+</section>
+
+<section>
+  <h1>Objects (<a class="pbs_link">PBS 17</a>)</h1>
+
+  <pre>
+var obj = { // create object
+	key1: "value 1",
+	"key with space": 42
+};
+obj.key3 = 3.1415; // set value method 1
+obj["key 4"] = false; // set value method 2
+var b = obj.key1; // access method 1
+var c = obj["key with space"]; // access method 2
+  </pre>
+
+  <h2>Get Keys</h2>
+  <pre>
+var keysArray = Object.keys(obj);
+  </pre>
+
+  <h2>JSON</h2>
+  <pre>
+// only plain objects can be converted to, or from JSON
+var jsonString = JSON.stringify(myPlainObject);
+var myPlainObject = JSON.parse(aJSONString);
+  </pre>
+
+  <h2>Prototyped Objects</h2>
+  <pre>
+//
+// create prototype Dummy
+//
+
+// constructor
+function Dummy(v){
+	this._value = v;
+}
+
+// accessor function
+Dummy.value = function(){
+	if(arguments.length > 0){
+		this._value = arguments[0];
+	}
+	return this._value;
+};
+
+//
+// Use prototype
+//
+var d = new Dummy(4);
+d.value(5);
+var dVal = d.value();
+  </pre>
+</section>
+
+<section>
+  <h1>Regular Expressions (<a class="pbs_link">PBS 18</a>)</h1>
+  <p>In JavaScript, regular expressions are objects with the <code>RegExp</code>
+  prototype.</p>
+
+  <pre>
+// create RE
+var intRE = /^[-]?\d+$/; // RE to test if entire string is int
+var curRE = /([£$€])([-]?\d+([.]\d{2})?)/g; // RE to match all currency ammounts
+  // note the g flag at the end of the RE for 'global'
+  // also note sub-match grouping with perentheses
+
+// test a value against an RE
+var b1 = intRE.test('12'); // true
+var b2 = intRE.test('12.5'); // false
+
+// execute an RE against a string
+var res1 = curRE.exec("no currencies in this string"); // null
+var res2 = curRE.exec("My Dinner Cost $22.56"); // returns a results object:
+  // res2[0] = '$22.56' (entire matched sting)
+  // res2[1] = '$' (first submatch)
+  // res2[2] = '22.56' (second submatch)
+  // ...
+
+// loop through multiple matches in single string
+var testStr = "My Dinner Cost $22.56, much cheaper than the $55.04 from last week";
+var res3;
+while((res3 = curRE.exec(testStr)) !== null){
+	//first time around res3[0] = $22.56
+	// second time around res3[0] = $55.04
+}
+  </pre>
+</section>
+
+<section>
+  <h1>Control of Flow</h1>
+
+  <h2>Conditionals (<a class="pbs_link">PBS 13</a>)</h2>
+  <pre>
+if(x == y){
+	// do something
+}
+  </pre>
+
+  <h2>Loops (<a class="pbs_link">PBS 14</a>)</h2>
+  <pre>
+// while loop
+while(x == y){
+	// do something
+}
+
+// for loop
+for(var i = 0; i < x; i++){
+	// do something
+}
+  </pre>
+
+  <h2>Functions (<a class="pbs_link">PBS 15</a> &amp; <a class="pbs_link">PBS 16</a>)</h2>
+  <pre>
+// define a function
+function myFn(a, b){
+	return a + b;
+}
+
+// invoke a function
+var c = myFn(3, 4);
+
+// function objects
+var myFn2 = function(a, b){ return a - b; };
+var d = myFn2(9, 6);
+  </pre>
+
+  <h2>Exceptions (<a class="pbs_link">PBS 18</a>)</h2>
+  <pre>
+// throw an error
+throw new Error('Error Message Here');
+
+// try/catch
+try{
+	// code that could throw error
+}catch(err){
+	// error message in err.message
+}
+  </pre>
+</section>
+
+<section>
+  <h1>Built-in Objects</h1>
+
+  <h2>Mathematical Constants &amp; Functions (<a class="pbs_link">PBS 18</a>)</h2>
+  <pre>
+// constants
+var p = Math.PI; //Pi
+var natLog10 = Math.LN10; // natural log of 10
+var natlog2 = Math.LN2; // natural lof of 2
+var euler = Math.E; // Euler's constant
+
+// functions
+var s = Math.sin(30);
+var c = Math.cos(30);
+var t = Math.tan(30);
+var r1 = Math.round(2.4); // 2
+var r1 = Math.round(2.5); // 3
+var r2 = Math.round(2.6); // 3
+var f = Math.floor(2.6); // 2
+var c = Math.ceil(2.1); // 3
+var a1 = Math.abs(23); // 23
+var a2 = Math.abs(-23); // 23
+var sr = Math.sqrt(64); // 8 - square root
+var rand = Math.random(); // between 0 and 1
+var rInt1 = Math.floor(Math.random() * 100); // 0 - 99
+var rInt2 = Math.floor((Math.random() * 10) + 1); // 1 - 9
+  </pre>
+</section>
+
+</main>
+<footer>
+  <h2>Created 08JUN2016<br />by Bart Busschots</h2>
+  <h2>Updated 17NOV2018<br />by Jonathan Kane</h2>
+</footer>
+</body>
+</html>
