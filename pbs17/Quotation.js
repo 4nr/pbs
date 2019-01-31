@@ -1,0 +1,3 @@
+function Quotation(quote, by){
+  
+}
